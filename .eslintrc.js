@@ -19,6 +19,7 @@ module.exports = {
 		"@typescript-eslint/no-inferrable-types": "off",
 		indent: [2, "tab"],
 		"no-tabs": 0,
-		"prettier/prettier": ["error", { useTabs: true, tabWidth: 4 }]
+		"prettier/prettier": ["error", { useTabs: true, tabWidth: 4 }],
+		"@typescript-eslint/no-explicit-any": ["off"]
 	}
 };

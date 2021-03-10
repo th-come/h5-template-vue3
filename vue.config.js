@@ -1,3 +1,4 @@
+/* eslint-disable */
 const QiniuWebpackPlugin = require("better-qiniu-webpack-plugin");
 const path = require("path");
 function resolve(dir) {
@@ -38,7 +39,7 @@ module.exports = {
 	devServer: {
 		open: true,
 		host: "0.0.0.0",
-		port: 8080,
+		port: 8081,
 		overlay: {
 			errors: true,
 			warnings: true
