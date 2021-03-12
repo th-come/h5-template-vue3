@@ -2,8 +2,8 @@
 	<div class="hello">
 		<h1>{{ msg }}</h1>
 		<h1>Student</h1>
-		<h1>name: {{ th.name }}</h1>
-		<h1>age: {{ th.age }}</h1>
+		<h1>name: {{ student.name }}</h1>
+		<h1>age: {{ student.age }}</h1>
 		<h1>score: {{ score }}</h1>
 		<van-button van-button type="success" @click="updateScore"
 			>加分</van-button
@@ -12,9 +12,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed } from "vue";
-import { useStore } from "vuex";
-import { Button } from "vant";
+import { defineComponent, ref, computed } from 'vue';
+import { useStore } from 'vuex';
+import { Button } from 'vant';
 
 interface Student {
 	name: string;
@@ -24,7 +24,7 @@ interface Student {
 }
 
 export default defineComponent({
-	name: "HelloWorld",
+	name: 'HelloWorld',
 
 	props: {
 		msg: String
@@ -35,16 +35,17 @@ export default defineComponent({
 	},
 
 	setup() {
-		const hello = ref<string>("hello");
-		const th: Student = { name: "th", age: 11 };
+		const hello = ref<string>('hello');
+		const student: Student = { name: 'th', age: 11 };
 		const store = useStore();
 		const score = computed(() => store.state.score);
 		const updateScore = () => {
-			store.dispatch("updateScore", score.value);
+			store.dispatch('updateScore', score.value);
 		};
+
 		return {
 			hello,
-			th,
+			student,
 			score,
 			updateScore
 		};
@@ -52,7 +53,6 @@ export default defineComponent({
 });
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 h1 {
 	font-size: 30px;

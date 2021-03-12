@@ -5,8 +5,8 @@
 	</div>
 </template>
 <script lang="ts">
-import { defineComponent, reactive } from "vue";
-import Counter from "@/components/Counter"; // @ is an alias to /src
+import { defineComponent, reactive } from 'vue';
+import Counter from '@/components/Counter'; // @ is an alias to /src
 interface CounterObj {
 	msg: string;
 	num: number;
@@ -18,12 +18,12 @@ export default defineComponent({
 	},
 	setup() {
 		const counterObj = reactive<CounterObj>({
-			msg: "hello tsx",
-			num: 2
+			msg: 'hello tsx',
+			num: 0
 		});
 
 		const counterAdd = (tip: string) => {
-			console.log("提示", tip);
+			console.log('提示', tip);
 			counterObj.num++;
 		};
 

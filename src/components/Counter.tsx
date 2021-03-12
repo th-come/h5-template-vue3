@@ -1,6 +1,6 @@
-import { defineComponent, reactive, PropType, toRefs } from "vue";
-import "./Counter.scss";
-import { Button } from "vant";
+import { defineComponent, PropType, toRefs } from 'vue';
+import './Counter.scss';
+import { Button } from 'vant';
 
 interface CounterObj {
 	msg: string;
@@ -13,7 +13,7 @@ const Counter = defineComponent({
 			type: Object as PropType<CounterObj>,
 			default: () => {
 				return {
-					msg: "",
+					msg: '',
 					num: 0
 				};
 			}
@@ -23,17 +23,12 @@ const Counter = defineComponent({
 		vanButton: Button
 	},
 	setup(props, content) {
-		const state = reactive({ count: 0 });
-		const handleClick = () => state.count++;
 		const { msg, num } = toRefs(props.counterObj);
 		const addNum = () => {
-			content.emit("counterAdd", "增加");
+			content.emit('counterAdd', '增加');
 		};
 		return () => (
 			<div>
-				<van-button type="success" onClick={handleClick}>
-					count: {state.count}
-				</van-button>
 				<div class="btntop">
 					<van-button type="success" onClick={addNum}>
 						num：{num.value}

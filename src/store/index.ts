@@ -1,11 +1,11 @@
-import { createStore } from "vuex";
+import { createStore } from 'vuex';
 
 export default createStore({
 	state: {
 		score: 30
 	},
 	mutations: {
-		updateScore(state, score: number) {
+		updateScore(state, score) {
 			state.score = score;
 		}
 	},
@@ -19,8 +19,7 @@ export default createStore({
 					reject(0);
 				}
 			});
-			console.log("newScore", newScore);
-			context.commit("updateScore", newScore);
+			context.commit('updateScore', newScore);
 		}
 	},
 	modules: {}
