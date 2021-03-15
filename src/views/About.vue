@@ -4,6 +4,7 @@
 		<counter :counterObj="counterObj" @counterAdd="counterAdd"></counter>
 	</div>
 </template>
+
 <script lang="ts">
 import { defineComponent, reactive } from 'vue';
 import Counter from '@/components/Counter'; // @ is an alias to /src

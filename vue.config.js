@@ -8,7 +8,7 @@ module.exports = {
 	publicPath: "./",
 	chainWebpack: config => {
 		config.resolve.alias.set("@", resolve("src"));
-		if (process.env.NODE_ENV === "production") {
+		if (process.env.NODE_ENV === "production") { 
 			// 生产模式 console.log 去除
 			config.optimization.minimizer("terser").tap(args => {
 				Object.assign(args[0].terserOptions.compress, {
