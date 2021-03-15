@@ -1,5 +1,5 @@
 /* eslint-disable */
-const QiniuWebpackPlugin = require("better-qiniu-webpack-plugin");
+const QiniuWebpackPlugin = require("wnl-qiniu-webpack-plugin");
 const path = require("path");
 function resolve(dir) {
 	return path.join(__dirname, dir);
