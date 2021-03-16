@@ -34,7 +34,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ├─public   
 │     favicon.ico   
 │     index.html   
-├─dist   						—— 打包输出目录    
+├─dist                          —— 打包输出目录    
 │        
 └─src                           —— 开发目录    
     │  App.vue  
