@@ -10,12 +10,12 @@ npm install
 npm run dev
 ```
 
-### 测试环境
+### 测试环境 构建完成后上传测试环境
 ```
 npm run test
 ```
 
-### 生产环境
+### 生产环境 静态资源构建完成后上传CDN
 ```
 npm run build
 ```
@@ -34,7 +34,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ├─public   
 │     favicon.ico   
 │     index.html   
-├─dist   —— 打包输出目录    
+├─dist   						—— 打包输出目录    
 │        
 └─src                           —— 开发目录    
     │  App.vue  
