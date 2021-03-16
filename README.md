@@ -1,16 +1,21 @@
 # vue3-performance-cdn
 
-## Project setup
+## 项目初始化
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 开发环境
 ```
-npm run serve
+npm run dev
 ```
 
-### Compiles and minifies for production
+### 测试环境
+```
+npm run test
+```
+
+### 生产环境
 ```
 npm run build
 ```

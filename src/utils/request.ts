@@ -1,10 +1,7 @@
 import axios from 'axios';
 import qs from 'qs';
 
-axios.defaults.baseURL =
-	process.env.NODE_ENV === 'development'
-		? 'http://localhost:8081'
-		: 'http://114.115.139.238:5005'; // 线上地址
+axios.defaults.baseURL = process.env.NODE_ENV === 'development' ? 'http://localhost:8081' : 'http://114.115.139.238:5005'; // 线上地址
 axios.defaults.timeout = 60000;
 axios.interceptors.response.use(
 	response => {

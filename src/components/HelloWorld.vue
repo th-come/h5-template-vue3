@@ -5,9 +5,7 @@
 		<h1>name: {{ student.name }}</h1>
 		<h1>age: {{ student.age }}</h1>
 		<h1>score: {{ score }}</h1>
-		<van-button van-button type="success" @click="updateScore"
-			>加分</van-button
-		>
+		<van-button van-button type="success" @click="updateScore">加分</van-button>
 	</div>
 </template>
 

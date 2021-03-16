@@ -3,13 +3,7 @@ module.exports = {
 	env: {
 		node: true
 	},
-	extends: [
-		'plugin:vue/vue3-essential',
-		'eslint:recommended',
-		'@vue/typescript/recommended',
-		'@vue/prettier',
-		'@vue/prettier/@typescript-eslint'
-	],
+	extends: ['plugin:vue/vue3-essential', 'eslint:recommended', '@vue/typescript/recommended', '@vue/prettier', '@vue/prettier/@typescript-eslint'],
 	parserOptions: {
 		ecmaVersion: 2020
 	},
@@ -19,10 +13,7 @@ module.exports = {
 		'@typescript-eslint/no-inferrable-types': 'off',
 		indent: [2, 'tab'],
 		'no-tabs': 0,
-		'prettier/prettier': [
-			'error',
-			{ useTabs: true, tabWidth: 4, singleQuote: true }
-		],
+		'prettier/prettier': ['error', { printWidth: 150, useTabs: true, tabWidth: 4, singleQuote: true }],
 		'@typescript-eslint/no-explicit-any': ['off']
 	}
 };
