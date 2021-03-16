@@ -30,11 +30,11 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 ### 项目结构
-
+```
 ├─public   
 │     favicon.ico   
 │     index.html   
-├─dist                          —— 打包输出目录    
+├─dist   —— 打包输出目录    
 │        
 └─src                           —— 开发目录    
     │  App.vue  
@@ -72,3 +72,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ├─README.md    
 ├─tsconfig.json    
 ├─vue.config.js    
+```
