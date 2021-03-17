@@ -34,7 +34,7 @@ export default defineComponent({
 
 	setup() {
 		const hello = ref<string>('hello');
-		const student: Student = { name: 'th', age: 11 };
+		const student: Student = { name: 'th', age: 8 };
 		const store = useStore();
 		const score = computed(() => store.state.score);
 		const updateScore = () => {
