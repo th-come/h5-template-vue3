@@ -12,6 +12,29 @@
 </head>
 
 <body>
+	<script>
+		!(function (c, i, e, b) {
+			var _bid = "vue3-performance-cdn";
+			var h = i.createElement("script");
+			var f = i.getElementsByTagName("script")[0];
+			h.type = "text/javascript";
+			h.crossorigin = true;
+			h.onload = function () {
+				try {
+					c[b] || (c[b] = new c.wnlReporter({
+						bid: _bid,
+						plugins: [],
+						spa: true
+					}));
+					c[b].installAll();
+				} catch (e) {
+					console.error('init wnlReporter fail', e);
+				}
+			};
+			f.parentNode.insertBefore(h, f);
+			h.src = e + "?app=" + _bid;
+		})(window, document, "//qiniu.other.cq-wnl.com/v1.0.3/wmsdk.min.js", "__wpk");
+	</script>
 	<noscript>
 		<strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
 				Please enable it to continue.</strong>
