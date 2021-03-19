@@ -1,7 +1,7 @@
 <template>
 	<div class="home">
 		<img alt="Vue logo" src="../assets/img/head-logo.png" />
-		<HelloWorld msg="Vue3 + TypeScript + cdn wnl-App" />
+		<HelloWorld msg="Vue3 + TypeScript + cdn App" />
 	</div>
 </template>
 
