@@ -1,6 +1,6 @@
 <template>
 	<div class="about btntop">
-		<h1>This is an about page</h1>
+		<h1>This is an about wnl-page</h1>
 		<counter :counterObj="counterObj" @counterAdd="counterAdd"></counter>
 	</div>
 </template>
@@ -35,4 +35,8 @@ export default defineComponent({
 	}
 });
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.about {
+	background: #fff;
+}
+</style>

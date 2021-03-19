@@ -31,7 +31,7 @@ const Counter = defineComponent({
 			<div>
 				<div class="btntop">
 					<van-button type="success" onClick={addNum}>
-						num：{num.value}
+						计数num：{num.value}
 					</van-button>
 				</div>
 				<h1>msg: {msg.value}</h1>

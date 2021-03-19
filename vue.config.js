@@ -19,7 +19,7 @@ module.exports = {
 			});
 
 			// 静态资源上传七牛CDN
-			config.plugin("QiniuWebpackPlugin").use(QiniuWebpackPlugin, []);
+			// config.plugin("QiniuWebpackPlugin").use(QiniuWebpackPlugin, []);
 		}
 	},
 	css: {

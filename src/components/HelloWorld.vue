@@ -34,7 +34,7 @@ export default defineComponent({
 
 	setup() {
 		const hello = ref<string>('hello');
-		const student: Student = { name: 'th', age: 8 };
+		const student: Student = { name: 'th', age: 0 };
 		const store = useStore();
 		const score = computed(() => store.state.score);
 		const updateScore = () => {
@@ -55,7 +55,7 @@ export default defineComponent({
 h1 {
 	font-size: 30px;
 }
-h3 {
+h2 {
 	margin: 40px 0 0;
 }
 </style>
