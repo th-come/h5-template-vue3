@@ -48,6 +48,6 @@
 		"sass-loader": "^8.0.2",
 		"ts-import-plugin": "^1.6.7",
 		"typescript": "~3.9.3",
-		"wnl-qiniu-webpack-plugin": "^1.0.0"
+		"wnl-qiniu-webpack-plugin": "^1.0.1"
 	}
 }

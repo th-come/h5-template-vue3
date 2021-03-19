@@ -4,7 +4,7 @@ module.exports = {
 	bucket: 'wnlother',
 	bucketDomain: 'https://qiniu.other.cq-wnl.com/',
 	matchFiles: ['!*.html', '!*.map'],
-	uploadPath: '/vue3-demo/',
+	uploadPath: '/vue3-performance-cdn/',
 	usePublicPath: true,
 	batch: 10,
 	deltaUpdate: true
