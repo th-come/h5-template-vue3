@@ -81,5 +81,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 命令后（npm/yarn run test）,访问http://mobile.51wnl-cq.com/vue3-performance-cdn/#/    
 3.前端监控准备工作：
     1.向中台组提供项目名称，中台组需要调整apollo配置。
-    2.修改根目录public/index.html文件中_bid字段，调整为项目名称，比如：vue3-performance-cdn。
+    2.修改根目录public/index.html文件中_bid字段，调整为项目名称，比如：var _bid = "vue3-performance-cdn";。
 ```
