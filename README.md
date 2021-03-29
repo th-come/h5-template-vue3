@@ -20,7 +20,7 @@ npm run test
 npm run build
 ```
 
-### Lints and fixes files
+### 自动格式化文件
 ```
 npm run lint
 ```
