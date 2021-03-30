@@ -52,9 +52,9 @@ npm run lint
     ├─assets                    —— 静态资源    
     │            
     ├─components                —— 组件    
-	│
-	├─hooks                     —— hook函数  
-	│
+    │
+    ├─hooks                     —— hook函数  
+    │
     ├─router                    —— 页面路由    
     │      index.ts    
     │        
