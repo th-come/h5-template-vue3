@@ -11,6 +11,7 @@ module.exports = {
 		'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
 		'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
 		'@typescript-eslint/no-inferrable-types': 'off',
+		camelcase: [1, { properties: 'never' }],
 		indent: [2, 'tab'],
 		'no-tabs': 0,
 		'prettier/prettier': ['error', { printWidth: 150, useTabs: true, tabWidth: 4, singleQuote: true }],

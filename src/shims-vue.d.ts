@@ -6,5 +6,8 @@ declare module '*.vue' {
 }
 declare module '*.scss' {
 	const content: any;
-  	export default content;
+	export default content;
+}
+declare interface Window {
+	__wpk: any;
 }
