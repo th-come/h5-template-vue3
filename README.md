@@ -73,20 +73,39 @@ npm run lint
 ├─deplay.json                   —— ftp上传配置文件    
 ├─package-lock.json    
 ├─package.json   
-├─postcss.config.js    
+├─postcss.config.js    			—— postcss配置文件
 ├─README.md    
 ├─tsconfig.json    
-├─vue.config.js    
+├─vue.config.js                 —— vue全局配置文件
 ```
 
 ### 初始化项目后修改配置
 #### 1.CDN配置文件： 
 ```
+{
+	accessKey: '7PxNYDcrqfcsjGVQwI7xBHJ1_jsbpzaiiJIlI30_',    七牛 Access Key
+	secretKey: 'SQBkKHUzEfYoHf2V_CcM_uLM9vV1IbRlRzgUoIMa',    七牛 Secret Key
+	bucket: 'wnlother',										  七牛 空间名
+	bucketDomain: 'https://qiniu.other.cq-wnl.com/',          七牛 空间域名
+	matchFiles: ['!*.html', '!*.map'],						  匹配文件/文件夹
+	uploadPath: '/vue3-performance-cdn/',					  上传文件夹名
+	usePublicPath: true,									  使用publicPath
+	batch: 10,												  同时上传文件数
+	deltaUpdate: true										  是否增量构建
+};
 修改项目根目录下.qiniu-webpack.js中uploadPath字段，   
 调整为项目名称，比如：uploadPath: '/vue3-performance-cdn/', 
 ``` 
 #### ftp配置文件：
 ```
+{
+    "user": "ftpcoco",										ftp用户名
+    "password": "killers1Y",								ftp密码
+    "host": "118.190.25.113",								测试服务器ip
+    "port": 257,											测试服务器端口
+    "localRoot":  "/dist",									上传服务器本地文件路径
+    "remoteRoot": "/mobile.51wnl.com/vue3-performance-cdn"  上传到测试服存放位置
+}
 修改项目根目录下deplay.json中remoteRoot字段，    
 比如："remoteRoot": "/mobile.51wnl.com/vue3-performance-cdn",   
 执行打包测试环境命令后（npm/yarn run test）,   
@@ -95,5 +114,5 @@ npm run lint
 #### 前端监控接入：
 ```
 1.向中台组提供项目名称，中台组需要调整apollo配置。
-2.修改根目录public/index.html文件中_bid字段，调整为项目名称，比如：var _bid = "vue3-performance-cdn";。
+2.修改根目录public/index.html文件中_bid字段，调整为项目名称，比如：var _bid = "vue3-performance-cdn"。
 ```
