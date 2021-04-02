@@ -95,8 +95,8 @@ npm run lint
 	batch: 10,                                                同时上传文件数
 	deltaUpdate: true                                         是否增量构建
 };
-修改项目根目录下.qiniu-webpack.js中uploadPath字段，   
-调整为项目名称，比如：uploadPath: '/vue3-performance-cdn/', 
+项目根目录下.qiniu-webpack.js中uploadPath字段，会获取package.json中的name作为文件名
+比如：uploadPath: '/vue3-performance-cdn/', 
 ``` 
 #### ftp配置文件：
 ```
@@ -108,7 +108,7 @@ npm run lint
     "localRoot":  "/dist",                                  上传服务器本地文件路径
     "remoteRoot": "/mobile.51wnl.com/vue3-performance-cdn"  上传到测试服存放位置
 }
-修改项目根目录下deplay.json中remoteRoot字段，    
+项目根目录下deplay.js中remoteRoot字段，会获取package.json中的name作为路径名      
 比如："remoteRoot": "/mobile.51wnl.com/vue3-performance-cdn",   
 执行打包测试环境命令后（npm/yarn run test）,   
 访问测试项目地址：http://mobile.51wnl-cq.com/vue3-performance-cdn/#/    
@@ -116,5 +116,5 @@ npm run lint
 #### 前端监控接入：
 ```
 1.向中台组提供项目名称，中台组需要调整apollo配置。
-2.修改根目录public/index.html文件中_bid字段，调整为项目名称，比如：var _bid = "vue3-performance-cdn"。
+2.修改根目录public/index.html文件中_bid字段，会获取package.json中的name作为bid名，比如：var _bid = "vue3-performance-cdn"。
 ```
