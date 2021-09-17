@@ -48,6 +48,12 @@
 	</noscript>
 	<div id="app"></div>
 	<!-- built files will be auto injected -->
+	<script src="https://cdn.bootcss.com/vConsole/3.3.4/vconsole.min.js"></script>
+	<script>
+		if ("<%= process.env.NODE_ENV %>" != "production") {
+			new VConsole();
+		}
+	</script>
 </body>
 
 </html>
