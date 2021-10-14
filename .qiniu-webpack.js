@@ -9,5 +9,6 @@ module.exports = {
 	uploadPath: `/${uploadPath}/`,
 	usePublicPath: true,
 	batch: 10,
-	deltaUpdate: true
+	deltaUpdate: true,
+	createCli: 'vue'
 };
