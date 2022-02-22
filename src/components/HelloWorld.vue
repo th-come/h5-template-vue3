@@ -38,7 +38,8 @@ export default defineComponent({
 		const store = useStore();
 		const score = computed(() => store.state.score);
 		const updateScore = () => {
-			store.dispatch('updateScore', score.value);
+			const value = score.value
+			store.dispatch('updateScore', value);
 		};
 
 		return {

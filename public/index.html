@@ -17,43 +17,11 @@
 </head>
 
 <body>
-	<script>
-		if ("<%= process.env.NODE_ENV %>" == "production") {
-			!(function (c, i, e, b) {
-				var _bid = `<%= htmlWebpackPlugin.options.title %>`;
-				var h = i.createElement("script");
-				var f = i.getElementsByTagName("script")[0];
-				h.type = "text/javascript";
-				h.crossorigin = true;
-				h.onload = function () {
-					try {
-						c[b] || (c[b] = new c.wnlReporter({
-							bid: _bid,
-							plugins: [],
-							spa: true
-						}));
-						c[b].installAll();
-					} catch (e) {
-						console.error('init wnlReporter fail', e);
-					}
-				};
-				f.parentNode.insertBefore(h, f);
-				h.src = e + "?app=" + _bid;
-			})(window, document, "//qiniu.other.cq-wnl.com/v1.0.3/wmsdk.min.js", "__wpk");
-		}
-	</script>
 	<noscript>
 		<strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
 				Please enable it to continue.</strong>
 	</noscript>
 	<div id="app"></div>
-	<!-- built files will be auto injected -->
-	<script src="https://cdn.bootcss.com/vConsole/3.3.4/vconsole.min.js"></script>
-	<script>
-		if ("<%= process.env.NODE_ENV %>" != "production") {
-			new VConsole();
-		}
-	</script>
 </body>
 
 </html>

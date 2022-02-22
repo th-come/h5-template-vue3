@@ -1,5 +1,4 @@
 /* eslint-disable */
-const QiniuWebpackPlugin = require("wnl-qiniu-webpack-plugin");
 const path = require("path");
 function resolve(dir) {
 	return path.join(__dirname, dir);
@@ -17,9 +16,6 @@ module.exports = {
 				});
 				return args;
 			});
-
-			// 静态资源上传七牛CDN
-			config.plugin("QiniuWebpackPlugin").use(QiniuWebpackPlugin, []);
 		}
 	},
 	css: {
@@ -55,5 +51,5 @@ module.exports = {
 			}
 		}
 	},
-	lintOnSave: process.env.NODE_ENV !== "production" //是否关闭eslint true or false
+	lintOnSave: false //是否关闭eslint true or false
 };

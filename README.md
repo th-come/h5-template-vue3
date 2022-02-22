@@ -1,12 +1,4 @@
-# vue3-performance-cdn
-
-## 创建项目
-#### 1.全局安装wnl-cli：  
-npm install wnl-cli -g   
-创建项目：wnl init project-name   
-具体使用方法：[wnl-cli](http://gitlab.ylwnl.com:8081/yaoxiao/wnl-cli)。   
-#### 2.安装前使用nrm切换至wnl源:    
-具体使用方法：[nrm添加wnl源](http://192.168.1.130:4567/%E5%B0%86npm%E5%AE%89%E8%A3%85%E6%BA%90%E6%8C%87%E5%90%91%E6%B5%8B%E8%AF%95%E6%9C%8D%E5%8A%A1%E5%99%A8)
+# h5-template-vue3
 
 
 ## 初始化依赖
@@ -70,51 +62,11 @@ npm run lint
 ├─.browserslistrc     
 ├─.eslintrc.js                  —— eslint配置文件    
 ├─.gitignore    
-├─.qiniu-webpack.js             —— 七牛云上传配置文件    
-├─babel.config.js     
-├─deplay.json                   —— ftp上传配置文件    
+├─babel.config.js         
 ├─package-lock.json    
 ├─package.json   
 ├─postcss.config.js             —— postcss配置文件
 ├─README.md    
 ├─tsconfig.json    
 ├─vue.config.js                 —— vue全局配置文件
-```
-
-### 初始化项目后修改配置
-#### 1.CDN配置文件： 
-```
-{
-	accessKey: '7PxNYDcrqfcsjGVQwI7xBHJ1_jsbpzaiiJIlI30_',    七牛 Access Key
-	secretKey: 'SQBkKHUzEfYoHf2V_CcM_uLM9vV1IbRlRzgUoIMa',    七牛 Secret Key
-	bucket: 'wnlother',                                       七牛 空间名
-	bucketDomain: 'https://qiniu.other.cq-wnl.com/',          七牛 空间域名
-	matchFiles: ['!*.html', '!*.map'],                        匹配文件/文件夹
-	uploadPath: '/vue3-performance-cdn/',                     上传文件夹名
-	usePublicPath: true,                                      使用publicPath
-	batch: 10,                                                同时上传文件数
-	deltaUpdate: true                                         是否增量构建
-};
-项目根目录下.qiniu-webpack.js中uploadPath字段，会获取package.json中的name作为文件名
-比如：uploadPath: '/vue3-performance-cdn/', 
-``` 
-#### ftp配置文件：
-```
-{
-    "user": "ftpcoco",                                      ftp用户名
-    "password": "killers1Y",                                ftp密码
-    "host": "118.190.25.113",                               测试服务器ip
-    "port": 257,                                            测试服务器端口
-    "localRoot":  "/dist",                                  上传服务器本地文件路径
-    "remoteRoot": "/mobile.51wnl.com/vue3-performance-cdn"  上传到测试服存放位置
-}
-项目根目录下deplay.js中remoteRoot字段，会获取package.json中的name作为路径名      
-比如："remoteRoot": "/mobile.51wnl.com/vue3-performance-cdn",   
-执行打包测试环境命令后（npm/yarn run test）,   
-访问测试项目地址：http://mobile.51wnl-cq.com/vue3-performance-cdn/#/    
-```
-#### 前端监控接入：
-```
-1.向中台组提供项目名称，中台组需要调整apollo配置。
-2.修改根目录public/index.html文件中_bid字段，会获取package.json中的name作为bid名，比如：var _bid = "vue3-performance-cdn"。
 ```
